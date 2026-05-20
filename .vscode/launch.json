@@ -466,7 +466,33 @@
                     "ignoreFailures": true
                 }
             ]
-        }
-
+        },
+        {
+            "name": "Debug postdecoder example - Unicore",
+            "type": "cppdbg",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/bin",
+            "program": "${workspaceFolder}/bin/postdecoder",
+            "args": [
+              "-U",
+              "-in",
+              "${workspaceFolder}/example/postdecoder/Unicore_2024360.B2bBin",
+              "-out",
+              "${workspaceFolder}/bin/debug_unicore.B2bSSR"
+            ],
+            "stopAtEntry": false,
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "preLaunchTask": "cmake: build debug",
+            "setupCommands": [
+              {
+                "description": "Enable gdb pretty printing",
+                "text": "-enable-pretty-printing",
+                "ignoreFailures": true
+              }
+            ]
+          }
     ]
 }
